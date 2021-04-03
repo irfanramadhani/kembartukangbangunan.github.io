@@ -1,0 +1,142 @@
+/* bagian navbar */
+.navbar{ /*mengatur tumpukan supaya navbar diatas jumbotron*/
+  position: relative;
+  z-index: 1;
+}
+.navbar-brand {
+  /*merubah yg ada di class navbar-brand*/
+  font-family: viga;
+  font-size: 25px; /*25*/
+}
+/* membuat class baru untuk tombol kontak kami supaya tidak ada garisnya*/
+.tombol{
+  text-transform: uppercase;
+  border-radius: 40px; /*40*/
+  
+}
+/* akhir navbar */
+/* jumbotron */
+.jumbotron{
+  background-image: url(weblanding/img/img/3.jpg);
+   background-size: cover; /* ganti size bg supaya pas atau penuh memakai cover*/
+   height: 244px; /* 540mengatur ukuran background*/
+   
+   text-align: center;
+   position: relative;
+}
+.jumbotron .container{ /*mengatur tumpukan supaya jumbotron ditumpukan kedua seletah navbar*/
+  z-index: 1;
+  position: relative;
+}
+.jumbotron::after{ /*membuat gradasi hitam di jumbotron*/
+  content: '';
+  display: block;
+  width: 100%; /*mengatur gradasi hitam supaya memenuhi jumbotron*/
+  height: 100%; /*mengatur gradasi hitam supaya memenuhi jumbotron*/
+  background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+  position: absolute;
+  bottom: 0;
+}
+.jumbotron .display-4{ /*mengatur teks pada jumbotron*/
+  color: white;
+  
+  margin-top: 70px; /*150*/
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0,0, 0.6) ; /*mengatur bayangan pada text*/
+  font-size: 16px; /*20*/
+  margin-bottom: 10px; /*30*/
+
+}
+.jumbotron .indo{
+  text-transform: uppercase;
+  border-radius: 10px; /*40*/
+  height: 35px;
+  font-size: 14px;
+  
+}
+
+/* info panel */
+.info-panel{
+  box-shadow: 0 3px 20px rgba(0,0,0,0.5);
+  border-radius: 8px; /*12 ,MEMBUAT GARIS MELENGKUNG*/ 
+  margin-top: -50px; /*100*/
+  background-color: white;
+  padding: 1px; /*30*/
+}
+.info-panel img{
+  width: 60px; /*80*/
+  height: 60px; /*80*/
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.info-panel h4{ /*mengatur tag h4 pada class info panel*/
+  font-size: 16px; /*16*/
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 8px; /*5*/
+}
+.info-panel p{   /*mengatur tag p pada class info panel*/
+  font-size: 15px; /*14*/
+  color: #acacac;
+  margin-top: -5px;
+  font-weight: 200;
+}
+/* akhir info panel */
+.jumbotron .display-4 span { /*mengatur span pada jumbotron*/
+  font-weight: 500;
+  font-size: 25px; /*30*/
+}
+
+
+
+
+
+
+
+
+/* cara untuk membedakan mobile version dan desktop version */
+
+/* responsive untuk laptop */
+@media (min-width: 992px) {
+  .tombol{
+    text-transform: uppercase;
+    border-radius: 40px; /*40*/
+    
+  }
+  .navbar-brand, .nav-link{
+    color: white !important; /*supaya tulisan navbar bewarna putih*/
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); /*membuat bayangan*/
+  }
+  .nav-link {
+    /*   merubah yg ada di class nav-link */
+    text-transform: uppercase;
+    margin-right: 30px;
+  }
+  /* MEMBUAT GARIS AKTIF DI NAVBAR */
+   .nav-link:hover::after {
+    content: '';
+    display: block;  /*membuat garis*/
+    border-bottom: 3px solid  #0b63dc;  /*membuat garis*/
+    width: 50%;   /*merubah ukuran border menjadi 50% dari ukuran display block.*/
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
+  .jumbotron{
+    background-size: cover;
+    margin-top: -75px; /*supaya background posisi diatas navbar*/
+    height: 954px;
+    width: 1867;
+    
+  }
+  .jumbotron .display-4 {
+    font-size: 62px;
+  }
+  .jumbotron .display-4 span { /*mengatur span pada jumbotron*/
+    font-weight: 500;
+    font-size: 40px;
+  }
+
+}
+
+
